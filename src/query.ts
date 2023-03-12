@@ -41,7 +41,6 @@ export class Query {
                 return `${this.query.type} ${
                     this.query.table
                 } (${valuesArray.join(",")})`;
-                break;
             }
             default: {
                 throw new TypeError(`Invalid query type ${this.query.type}`);
