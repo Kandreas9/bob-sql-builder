@@ -9,5 +9,5 @@ export interface Fields {
 }
 
 export interface Defaults {
-    [key: string]: any;
+    [key: string]: string;
 }
