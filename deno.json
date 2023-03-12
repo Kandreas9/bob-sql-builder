@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "strictPropertyInitialization": false
+    },
+    "tasks": {
+        "docker": "docker compose up",
+        "dev": "",
+        "test": "deno test --allow-net"
+    },
+    "watcher": {
+        "exts": ["js", "jsx", "ts", "tsx", "json"],
+        "match": ["**/*.*"],
+        "skip": ["Dockerfile"]
+    }
+}
