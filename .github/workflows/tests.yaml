@@ -1,0 +1,26 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: 1.31.1
+
+      - name: Install dependencies
+        run: deno cache --unstable deps.ts
+
+      - name: Lint code
+        run: deno lint src/
+
+      - name: Run tests
+        run: deno test
